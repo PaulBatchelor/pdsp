@@ -8,6 +8,9 @@ PDOBJ=sine~.pd_linux \
 	  round~.pd_linux \
 	  moogladder~.pd_linux \
 	  port~.pd_linux \
+	  thresh~.pd_linux \
+
+EXTPATH?=~/.pd/
 
 default: $(PDOBJ)
 
@@ -22,4 +25,7 @@ LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer -Wall -fPIC
 	ld -o $*.pd_linux $*.o -lc -lsporth -lsoundpipe -lsndfile -lm -shared
 	strip --strip-unneeded $*.pd_linux
 	rm $*.o
+
+install: $(PDOBJ)
+	cp $(PDOBJ) $(EXTPATH)
 
