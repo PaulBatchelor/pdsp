@@ -16,8 +16,7 @@ clean: ; rm -f *.pd_linux *.o
 
 .SUFFIXES: .pd_linux
 
-LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer \
-    -Wall -fPIC
+LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer -Wall -fPIC
 
 LINUXINCLUDE =  -I../../src 
 
