@@ -17,8 +17,7 @@ clean: ; rm -f *.pd_linux *.o
 .SUFFIXES: .pd_linux
 
 LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer \
-    -Wall -W -Wshadow -Wstrict-prototypes \
-    -Wno-unused -Wno-parentheses -Wno-switch -fPIC
+    -Wall -fPIC
 
 LINUXINCLUDE =  -I../../src 
 
