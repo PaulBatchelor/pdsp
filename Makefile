@@ -18,10 +18,8 @@ clean: ; rm -f *.pd_linux *.o
 
 LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer -Wall -fPIC
 
-LINUXINCLUDE =  -I../../src 
-
 .c.pd_linux:
-	cc $(LINUXCFLAGS) $(LINUXINCLUDE) -o $*.o -c $*.c
+	cc $(LINUXCFLAGS) -o $*.o -c $*.c
 	ld -o $*.pd_linux $*.o -lc -lsporth -lsoundpipe -lsndfile -lm -shared
 	strip --strip-unneeded $*.pd_linux
 	rm $*.o
