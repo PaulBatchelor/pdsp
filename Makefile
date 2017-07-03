@@ -11,9 +11,6 @@ default: $(PDOBJ)
 
 clean: ; rm -f *.pd_linux *.o
 
-# ----------------------- LINUX i386 -----------------------
-
-
 .SUFFIXES: .pd_linux
 
 LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer -Wall -fPIC
