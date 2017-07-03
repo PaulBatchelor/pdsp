@@ -6,6 +6,8 @@ PDOBJ=sine~.pd_linux \
 	  branch~.pd_linux \
 	  saw~.pd_linux \
 	  round~.pd_linux \
+	  moogladder~.pd_linux \
+	  port~.pd_linux \
 
 default: $(PDOBJ)
 
